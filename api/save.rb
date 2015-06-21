@@ -9,6 +9,9 @@ class Save < Grape::API
    
    params do 
      requires :date, type: String, desc: "Triggered date"
+     requires :deviceID, type: String, desc: "Device unique id"
+     requires :temp, type: String, desc: "tempature number"
+     requires :humidity, type: String, desc: "Humidity level"
    end
 
    post do 
