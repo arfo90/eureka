@@ -1,7 +1,7 @@
 require 'rack/test'
 require 'minitest/autorun'
 require 'rubygems'
-require_relative '../../api/health'
+require_relative '../api/health'
 
 
 class TestHealthEndpoint <  Minitest::Test 
