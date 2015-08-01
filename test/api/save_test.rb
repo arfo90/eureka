@@ -1,7 +1,7 @@
 require 'rack/test'
 require 'minitest/autorun'
 require 'rubygems'
-require_relative '../api/save'
+require_relative '../../api/save'
 
 
 class TestSaveEndpoint < Minitest::Test 

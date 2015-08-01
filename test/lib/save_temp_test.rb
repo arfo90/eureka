@@ -1,7 +1,7 @@
 require 'rack/test'
 require 'minitest/autorun'
 require 'rubygems'
-require_relative '../lib/save_temp'
+require_relative '../../lib/save_temp'
 
 class TestSaveEndpoint < Minitest::Test 
    include Rack::Test::Methods
