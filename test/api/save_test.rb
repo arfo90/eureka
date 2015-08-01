@@ -1,5 +1,5 @@
-require 'rack/test'
 require 'minitest/autorun'
+require 'rack/test'
 require 'rubygems'
 require_relative '../../api/save'
 
