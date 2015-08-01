@@ -8,3 +8,6 @@ rvm:
   - jruby-head
   - ree
 
+bundle install
+
+rake test
