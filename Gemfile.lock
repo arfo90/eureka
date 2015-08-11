@@ -43,8 +43,6 @@ GEM
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
-    rack-test (0.6.3)
-      rack (>= 1.0)
     rake (10.1.1)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
@@ -60,8 +58,7 @@ PLATFORMS
 
 DEPENDENCIES
   grape
-  minitest
+  json
   mocha
   mysql2
-  rack-test
   rake
