@@ -1,10 +1,9 @@
-require 'minitest/autorun'
 require 'rack/test'
 require 'rubygems'
 require_relative '../../api/health'
+require_relative '../testBase'
 
-
-class TestHealthEndpoint <  Minitest::Test 
+class TestHealthEndpoint <  TestBase
    include Rack::Test::Methods
 
    def app

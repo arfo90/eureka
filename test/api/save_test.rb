@@ -2,9 +2,9 @@ require 'minitest/autorun'
 require 'rack/test'
 require 'rubygems'
 require_relative '../../api/save'
+require_relative '../testBase'
 
-
-class TestSaveEndpoint < Minitest::Test 
+class TestSaveEndpoint < TestBase
    include Rack::Test::Methods
 
    def app
