@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'rubygems'
 require 'bundler'
+require_relative '../lib/storage'
 
 Bundler.require(:test)
 

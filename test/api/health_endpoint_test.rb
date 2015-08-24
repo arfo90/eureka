@@ -1,6 +1,3 @@
-require 'rack/test'
-require 'rubygems'
-require_relative '../../api/health'
 require_relative '../testBase'
 
 class TestHealthEndpoint <  TestBase

@@ -10,10 +10,14 @@ task :start do
  sh "rackup"
 end
 
+task :clean do
+  sh "rm -rf .build .bundle/ vendor/ bin -f"
+end
+
 namespace :docker do
   file '.build' do
-    cmd = "/bin/sh -c 'apt-get install -y zlib1g-dev && bundle install --deployment --binstubs'"
-    sh "sudo docker run --rm=true -t -e BUNDLE_APP_CONFIG='.bundle' -v `pwd`:/src -w /src ruby #{cmd}"
+    cmd = "/bin/sh -c 'apt-get install -y zlib1g-dev && bundle install --no-deployment --binstubs'"
+    sh "sudo docker run --rm=true -t -e BUNDLE_APP_CONFIG='.bundle' -v `pwd`:/src -w /src ruby:2.1 #{cmd}"
       # This is due to the fact that Docker always runs as root user.
       sh "sudo chown -R ${USER}. ."
 
@@ -23,11 +27,10 @@ namespace :docker do
   task :build => ['.build']
 
   task :test => [:build] do
-    sh "sudo docker run --rm=true -t -v `pwd`:/src -w /src ruby ./bin/rake test"
+    sh "sudo docker run --rm=true -t -v `pwd`:/src -w /src ruby:2.1 ./bin/rake test"
 
       # This is due to the fact that Docker always runs as root user.
       sh "sudo chown -R ${USER}. ."
   end
 end
-
 
