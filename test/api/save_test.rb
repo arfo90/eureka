@@ -4,7 +4,7 @@ class TestSaveEndpoint < TestBase
    include Rack::Test::Methods
 
    def app
-     Save
+     Storage::API::Save
    end
 
    def test_save_must_return_400_bad_request

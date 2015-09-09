@@ -4,7 +4,7 @@ class TestHealthEndpoint <  TestBase
    include Rack::Test::Methods
 
    def app
-     Health
+     Storage::API::Health
    end
 
    def test_health_must_return_200_ok
