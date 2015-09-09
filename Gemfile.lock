@@ -37,12 +37,13 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.11.2)
     multi_xml (0.5.5)
-    mysql2 (0.3.19)
     rack (1.6.4)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rake (10.4.2)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
@@ -59,9 +60,7 @@ PLATFORMS
 DEPENDENCIES
   grape
   json
+  minitest
   mocha
-  mysql2
+  rack-test
   rake
-
-BUNDLED WITH
-   1.10.6

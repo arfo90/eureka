@@ -1,7 +1,11 @@
 source "https://rubygems.org"
 
+gem 'rake'
 gem 'grape'
 gem 'json'
-gem 'mysql2'
-gem 'rake'
-gem 'mocha'
+
+group :test do
+  gem 'rack-test', :require => 'rack/test'
+  gem 'minitest', :require => 'minitest/autorun'
+  gem 'mocha', :require => 'mocha/mini_test'
+end
