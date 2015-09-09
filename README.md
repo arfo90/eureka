@@ -27,4 +27,8 @@ Start
 -----
 
  To send jason post request 
-     curl -H "Content-Type: application/json" -X POST -d '{"date":"Am I nailed it ?????????"}' http://localhost:80/save
+     curl -H "Content-Type: application/json" -X POST -d '{"date":"Am I nailed it?"}' http://localhost:80/save
+
+Docerized
+--------
+  All Rake tasks now is dockerized so upon test task for example, test happens in container
