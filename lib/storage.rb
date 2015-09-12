@@ -14,4 +14,8 @@ module Storage
        mount Storage::API::Health
      end
    end
+
+   module Service
+     autoload :DepotService, 'service/depot_service.rb'
+   end
 end
