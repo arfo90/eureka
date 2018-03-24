@@ -1,0 +1,3 @@
+package passGenerator
+
+func Generate() {}
