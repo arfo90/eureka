@@ -1,3 +1,0 @@
-package passGenerator
-
-func Generate() {}
