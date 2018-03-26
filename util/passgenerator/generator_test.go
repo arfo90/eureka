@@ -6,7 +6,23 @@ import (
 )
 
 func TestGenerator(t *testing.T) {
-	password := Generator()
+  tests := []struct {
+          long            bool
+          expected_char   int
+  }{
+    {
+      long: false,
+      expected_char: 8,
+    },
+    {
+      long: true,
+      expected_char: 14,
+    },
+  }
 
-  assert.Equal(t, "Hi", password, "Seems they are not matched!")
+  for _, test := range tests {
+      password := Generator(test.long)
+      t.Log(password)
+      assert.Equal(t, test.expected_char, len(password), "The generated password has mismatch number of expected char")
+  }
 }
