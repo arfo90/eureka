@@ -19,6 +19,7 @@ func buildBluePrint(longPassword bool) []byte {
   } else {
     bluePrint = []byte{'N','N','S','S','L','L','L','L'}
   }
+  bluePrint = shuffle(bluePrint)
   return bluePrint
 }
 
@@ -39,4 +40,14 @@ func fillUpBluePrint(bluePrint []byte) string{
     }
   }
   return password
+}
+
+func shuffle(bluePrint []byte) []byte{
+  r := rand.New(rand.NewSource(time.Now().Unix()))
+  var newBluePrint []byte
+  for _, slot := range r.Perm(len(bluePrint)) {
+    val := bluePrint[slot]
+    newBluePrint = append(newBluePrint, val)
+  }
+  return newBluePrint
 }
