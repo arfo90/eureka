@@ -7,7 +7,7 @@ const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const numbers = "0123456789"
 const specials = "%@#$^&!()><?"
 
-func Generator(longPassword bool) string{
+func Generate(longPassword bool) string{
   bluePrint := buildBluePrint(longPassword)
   return fillUpBluePrint(bluePrint)
 }

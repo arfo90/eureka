@@ -21,7 +21,7 @@ func TestGenerator(t *testing.T) {
   }
 
   for _, test := range tests {
-      password := Generator(test.long)
+      password := Generate(test.long)
       t.Log(password)
       assert.Equal(t, test.expected_char, len(password), "The generated password has mismatch number of expected char")
   }
