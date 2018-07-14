@@ -4,5 +4,5 @@ require 'bundler/setup'
 Bundler.require(:default)
 
 module Sudokumaster
- ## autoload classes here
+  autoload :Table, 'sudokuMaster/table.rb'
 end
