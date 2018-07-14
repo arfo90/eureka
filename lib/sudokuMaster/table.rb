@@ -12,6 +12,10 @@ module Sudokumaster
       @grid[row_number]
     end
 
+    def col(col_number)
+      @grid.map {|r| r[col_number]}
+    end
+
 private
 
     def validate(numbers)

@@ -34,4 +34,14 @@ class TestTable < TestBase
     assert_equal(first_row, table.row(0), "Wrong row been returned!")
     assert_equal(last_row, table.row(8), "Wrong row been returned!")
   end
+
+  def test_navigate_col_return_particular_col_from_grid
+    table = Sudokumaster::Table.new(@nums)
+
+    first_col = [5,6,'*',8,4,7,'*','*','*']
+    last_col  = ['*','*','*',3,1,6,'*',5,9]
+
+    assert_equal(first_col, table.col(0), "Wrong col been returned!")
+    assert_equal(last_col, table.col(8), "Wrong col been returned!")
+  end
 end
