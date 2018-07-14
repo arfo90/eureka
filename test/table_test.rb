@@ -44,4 +44,26 @@ class TestTable < TestBase
     assert_equal(first_col, table.col(0), "Wrong col been returned!")
     assert_equal(last_col, table.col(8), "Wrong col been returned!")
   end
+
+  def test_get_particular_block_by_passing_cell_address
+    # so block is 3x3 grid inside main grid
+    table = Sudokumaster::Table.new(@nums)
+
+    top_left_block     = [5,3,'*',6,'*','*','*',9,8]
+    middle_block       = ['*',6,'*',8,'*',3,'*',2,'*']
+    bottom_right_block = [2,8,'*','*','*',5,'*',7,9]
+
+
+    assert_equal(top_left_block, table.get_block_by_cell(0,0), "Wrong block is returned!")
+    assert_equal(top_left_block, table.get_block_by_cell(1,1), "Wrong block is returned!")
+    assert_equal(top_left_block, table.get_block_by_cell(2,2), "Wrong block is returned!")
+
+    assert_equal(middle_block, table.get_block_by_cell(3,3), "Wrong block is returned!")
+    assert_equal(middle_block, table.get_block_by_cell(4,3), "Wrong block is returned!")
+    assert_equal(middle_block, table.get_block_by_cell(5,5), "Wrong block is returned!")
+
+    assert_equal(bottom_right_block, table.get_block_by_cell(6,6), "Wrong block is returned!")
+    assert_equal(bottom_right_block, table.get_block_by_cell(7,7), "Wrong block is returned!")
+    assert_equal(bottom_right_block, table.get_block_by_cell(8,8), "Wrong block is returned!")
+  end
 end
