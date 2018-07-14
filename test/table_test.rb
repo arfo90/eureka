@@ -66,4 +66,11 @@ class TestTable < TestBase
     assert_equal(bottom_right_block, table.get_block_by_cell(7,7), "Wrong block is returned!")
     assert_equal(bottom_right_block, table.get_block_by_cell(8,8), "Wrong block is returned!")
   end
+
+  def test_set_value_of_a_cell
+    table = Sudokumaster::Table.new(@nums)
+    table.set_cell(0,0,5)
+
+    assert_equal(5, table.grid[0][0], "value, didn't change!")
+  end
 end

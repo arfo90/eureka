@@ -42,6 +42,10 @@ module Sudokumaster
       block
     end
 
+    def set_cell(row, col, value)
+      @grid[row][col] = value
+    end
+
 private
 
     def validate(numbers)
