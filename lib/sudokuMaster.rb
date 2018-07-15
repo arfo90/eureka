@@ -5,4 +5,10 @@ Bundler.require(:default)
 
 module Sudokumaster
   autoload :Table, 'sudokuMaster/table.rb'
+  autoload :Game, 'sudokuMaster/game.rb'
+
+  module Strategy
+    autoload :Factory, 'sudokuMaster/strategy/factory.rb'
+    autoload :SimplePlayer, 'sudokuMaster/strategy/simple_player.rb'
+  end
 end

@@ -1,6 +1,6 @@
 require_relative './base_test'
 
-class TestTable < TestBase
+class TableTest < TestBase
   def setup
     @nums_empty = Array.new(9){Array.new(9)}
     @nums = [[5,3,'*','*',7,'*','*','*','*'],
