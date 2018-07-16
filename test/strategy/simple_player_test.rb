@@ -9,6 +9,7 @@ class SimplePlayerTest < TestBase
   def test_play_method_accept_grid_and_returns_possible_answers_as_grid
     player = Sudokumaster::Strategy::SimplePlayer.new
     solved_grid = player.play(@grid)
-    assert_equal(6, solved_grid[0][3], "Player picked Wrong number!")
+    assert_equal(6, solved_grid[0].grid[0][3], "Player picked Wrong number!")
+    assert_equal(36, solved_grid[1], "wrong unsolved values")
   end
 end
