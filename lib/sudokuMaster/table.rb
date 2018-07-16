@@ -9,11 +9,11 @@ module Sudokumaster
     end
 
     def row(row_number)
-      @grid[row_number]
+      grid[row_number]
     end
 
     def col(col_number)
-      @grid.map {|row| row[col_number]}
+      grid.map {|row| row[col_number]}
     end
 
     def get_block_by_cell(row, col)
@@ -43,7 +43,7 @@ module Sudokumaster
     end
 
     def set_cell(row, col, value)
-      @grid[row][col] = value
+      grid[row][col] = value
     end
 
 private
